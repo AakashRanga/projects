@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="{% static 'security/login/style.css' %}">
+  </head>
+  <body style="background-image: url({% static 'robot/images/robot_wall4.jpeg' %}); background-size: cover; ">
+  <script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+  </script>
+    <div class="center">
+      <h1>Login</h1>
+      <form action="/security_login/" method="post">
+        {% csrf_token %}
+        <div class="txt_field">
+          <input type="text" name="email" >
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="password" >
+          <span></span>
+          <label>Password</label>
+        </div>
+
+        <input type="submit" value="Login">
+        <div class="signup_link">
+
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

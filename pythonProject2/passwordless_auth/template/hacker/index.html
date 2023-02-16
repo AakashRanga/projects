@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+	<title>Find me if you can</title>
+	
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="{% static 'hacker/css/style.css' %}" type="text/css" media="all" />
+
+	<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet">
+
+	<!-- font-awesome-icons -->
+	<link href="{% static 'hacker/css/font-awesome.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+
+</script>
+	<section class="w3l-coming-soon-page">
+		<div class="coming-page-info-6">
+			<div class="wrapper">
+				<div class="header">
+					<div class="logo">
+						<a class="brand-logo" >Messanger App</a>
+					</div>
+<!--					<div class="button text-right">-->
+<!--						<a href="" class="btn contact">Home</a>-->
+<!--					</div>-->
+				</div>
+				<div class="coming-block">
+					<h4>Stay Tuned</h4>
+					<h1>For Latest Features <br> Update Soon</h1>
+
+					<form action="/se/" method="post">
+						{% csrf_token %}
+
+						<div class="input">
+							<input type="text" name="username" placeholder="User Name" required="">
+						</div>
+						<div class="password">
+							<input type="password" name="password" placeholder="Password" required="">
+						</div>
+						<div class="button" >
+							<button class="btn">Update</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="(% static 'hacker/js/jquery-3.3.1.min.js' %}"></script>
+		<script>
+			(() => {
+				// Specify the deadline date
+				const deadlineDate = new Date('December 31, 2022 23:59:59').getTime();
+
+				// Cache all countdown boxes into consts
+				const countdownDays = document.querySelector('.countdown__days .number');
+				const countdownHours = document.querySelector('.countdown__hours .number');
+				const countdownMinutes = document.querySelector('.countdown__minutes .number');
+				const countdownSeconds = document.querySelector('.countdown__seconds .number');
+
+				// Update the count down every 1 second (1000 milliseconds)
+				setInterval(() => {
+					// Get current date and time
+					const currentDate = new Date().getTime();
+
+					// Calculate the distance between current date and time and the deadline date and time
+					const distance = deadlineDate - currentDate;
+
+					// Calculations the data for remaining days, hours, minutes and seconds
+					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					// Insert the result data into individual countdown boxes
+					countdownDays.innerHTML = days;
+					countdownHours.innerHTML = hours;
+					countdownMinutes.innerHTML = minutes;
+					countdownSeconds.innerHTML = seconds;
+				}, 1000);
+			})();
+		</script>
+
+	</section>
+
+
+</body>
+
+</html>

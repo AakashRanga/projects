@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+<!--tr:nth-child(even) {-->
+<!--  background-color: #dddddd;-->
+}
+</style>
+</head>
+<body>
+<script>
+
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+</script>
+<form action="/home/" method="post">
+  {% csrf_token %}
+<h2>Login Details</h2>
+
+<table border="2">
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Email</th>
+      <th>Password</th>
+      <th>Number</th>
+    <th>Address</th>
+    <th>Image</th>
+    <th>File</th>
+    <th>Modify</th>
+    <th>Delete</th>
+
+  </tr>
+{% for x in data %}
+  <tr>
+    <td>{{ x.id }}</td>
+    <td>{{x.name}}</td>
+    <td>{{x.email}}</td>
+    <td>{{x.password}}</td>
+    <td>{{x.number}}</td>
+    <td>{{x.address}}</td>
+
+    <td><a  href="{{x.image.url}}" download>
+      <img src="{{x.image.url}}" alt="{{x.image}}" width="100" height="100">
+    </td>
+    <td><button type="submit"><a href="{{x.file.url}}" download>Download</button></td>
+    <td> <a href="/update/{{x.id}}/"> Update</a></td>
+    <td> <a href="/delete/{{x.id}}/"> Delete</a></td>
+    <td> <a href="/mail/{{x.id}}/"> Send Mail</a></td>
+
+{% endfor %}
+  </tr>
+</table>
+
+</body>
+</html>
+

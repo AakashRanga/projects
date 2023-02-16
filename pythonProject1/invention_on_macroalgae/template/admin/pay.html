@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% extends 'admin/home.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+	<title>Pay Slip</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="{% static 'pay_slip/css/style.css' %}" type="text/css" media="all" />
+</head>
+
+<body>
+	<!-- login form -->
+	<section class="w3l-login">
+		<div class="overlay">
+			<div class="wrapper">
+
+				<div class="form-section">
+					<h3>Pay Slip</h3>
+
+					<form action="/pay_slip/" method="post" class="signin-form">
+						{% csrf_token %}
+
+
+						<div class="form-input">
+							<h4>Company Name</h4>
+							<input type="text" name="company_name" placeholder="{{c}}" value="{{c}}" required="">
+						</div>
+
+						<div class="form-input">
+							<h4>Company Email</h4>
+							<input type="text" name="email" placeholder="{{d_}}" value="{{d_}}" required="" >
+						</div>
+
+						<div class="form-input">
+							<h4>Product</h4>
+							<input type="text" name="product" placeholder="{{purchases.product}}" value="{{purchases.product}}" required="" >
+						</div>
+
+						<div class="form-input">
+							<h4>Amount</h4>
+							<input type="text" name="amount" placeholder="${{purchases.total|floatformat:2}}" value="{{purchases.total|floatformat:2}}" required="" >
+						</div>
+
+						<input class="btn btn-primary submit" type="submit" value="Notify User">
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- /login form -->
+</body>
+{% endblock %}
+</html>

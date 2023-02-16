@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allow Users</title>
+    <link rel="stylesheet" href="{% static 'allow_users/side_bar/style.css' %}" />
+	  <link rel="stylesheet" href="{% static 'allow_users/css/style.css' %}">
+	  <link rel="stylesheet" href="{% static 'allow_users/delete_button/css/style.css' %}">
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+	  <style>
+		  <style>
+		  /* CSS */
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* CSS */
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+/* CSS */
+.button-33 {
+  background-color:crimson;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-33 {
+    padding: 10px 30px;
+  }
+}
+.element-selector {
+      height: 400px; /* set the height of the element */
+      overflow-y: scroll; /* add a vertical scrollbar when the content overflows the element */
+      }
+	  </style>
+
+  </head>
+  <body style="background-image: linear-gradient(to right, #8360c3, #2ebf91);">
+    <section class="sidebar" >
+      <div class="nav-header" >
+<!--        <p class="logo">Authentication</p>-->
+        <i class="bx bx-menu-alt-right btn-menu"></i>
+      </div>
+      <ul class="nav-links">
+
+        <li>
+          <a href="/admin_home/">
+            <i class="fas fa-home"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+		  <li>
+          <a href="/chat_bot/">
+			  <i class="fas fa-robot"></i>
+
+            <span class="title">Help Desk</span>
+          </a>
+          <span class="tooltip">Help Desk</span>
+        </li>
+		  {% if user.admin_status %}
+		  <li>
+          <a href="/allow_users/">
+			  <i class="fas fa-user-plus"></i>
+
+            <span class="title">Allow Users</span>
+          </a>
+          <span class="tooltip">Allow Users</span>
+        </li>
+		  {% endif %}
+        <li>
+          <a href="/_message/">
+			  <i class="fas fa-envelope"></i>
+			  <span class="title">Message App</span>
+          </a>
+          <span class="tooltip">Message App</span>
+        </li>
+        <li>
+          <a href="/_gallery/">
+            <i class='bx bxs-folder-open'></i>
+            <span class="title">Files</span>
+          </a>
+          <span class="tooltip">Files</span>
+        </li>
+		  <li>
+          <a href="/robot_home/">
+            <i class="fas fa-sync-alt"></i>
+            <span class="title">ROBOT</span>
+          </a>
+          <span class="tooltip">ROBOT</span>
+        </li>
+        <li>
+          <a href="/security_home/">
+			<i class="fas fa-lock"></i>
+            <span class="title">Security Alert</span>
+          </a>
+          <span class="tooltip">Security Alert</span>
+        </li>
+
+        <li>
+          <a href="/user_logout/">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="title">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+    </section>
+
+<section class="ftco-section" >
+		<div class="container" >
+			<div class="row justify-content-center" >
+				<div class="col-md-6 text-center mb-5" >
+					<h2 class="heading-section" style="color:white; font-size:30px;"><b>AUTHENTICATION</b></h2>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4"></h4>
+					<div class="table-wrap element-selector">
+						<table class="table">
+					    <thead class="thead-primary">
+					      <tr>
+					        <th>Name</th>
+					        <th>Email</th>
+					        <th>Approve</th>
+							  <th>Reject</th>
+							  <th>Status</th>
+							  <th>Delete</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+						{% for i in d %}
+					      <tr>
+
+					        <td><b>{{i.name}}</b></td>
+					        <td><b>{{i.email}}</b></td>
+					        <td>
+								<a href="/approve/{{i.id}}/"><button class="button-37" role="button">Approve</button></a>
+
+							</td>
+							  <td>
+								  <a href="/reject/{{i.id}}/"><button class="button-33" role="button">Reject</button></a>
+							  </td>
+							  <td><b style="color: {% if i.approved %}green{% else %}red{% endif %}">
+								  {{i.status}}
+							  </b></td>
+							  <td>
+								  <a href="/delete_users/{{i.id}}/">
+									  <button class="button">
+										<div class="trash">
+											<div class="top">
+												<div class="paper"></div>
+											</div>
+											<div class="box"></div>
+											<div class="check"> <svg viewBox="0 0 8 6">
+													<polyline points="1 3.4 2.71428571 5 7 1"></polyline>
+												</svg> </div>
+										</div> <span>Delete User</span>
+									</button>
+								  </a>
+							  </td>
+				  {% endfor %}
+
+					      </tr>
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<script src="{% static 'allow_users/delete_button/css/app.js' %}"></script>
+	<script src="{% static 'allow_users/js/jquery.min.js' %}"></script>
+  <script src="{% static 'allow_users/js/popper.js' %}"></script>
+  <script src="{% static 'allow_users/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'allow_users/js/main.js' %}"></script>
+
+    <script>
+      const btn_menu = document.querySelector(".btn-menu");
+      const side_bar = document.querySelector(".sidebar");
+
+      btn_menu.addEventListener("click", function () {
+        side_bar.classList.toggle("expand");
+        changebtn();
+      });
+
+      function changebtn() {
+        if (side_bar.classList.contains("expand")) {
+          btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+  </body>
+</html>

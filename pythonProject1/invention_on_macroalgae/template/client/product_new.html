@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+{% extends "client/home.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>For Edu or Org Design</title>
+
+    <style>
+
+        @media screen and (max-width: 600px) {
+            .remove-flex-mobile {
+                display: block !important;
+            }
+
+            .remove-flex-basis-mobile {
+                flex-basis: unset !important;
+                padding-left: 0 !important;
+            }
+
+            .display-grid-mobile {
+                grid-template-columns: 1fr !important;
+            }
+
+            .reminders-list {
+                padding-left: 15px !important;
+                margin-top: 10px !important;
+            }
+
+            .reminders-table td {
+                float: unset !important;
+                display: block !important;
+                width: unset !important;
+                margin-left: 0 !important;
+            }
+
+            .second-item-order {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .flex-order {
+                order: 2 !important;
+            }
+
+            .list-header {
+                padding-top: 20px !important;
+            }
+
+            .navigation-footer {
+                text-align: center !important;
+            }
+
+            .navigation-footer li {
+                display: list-item !important;
+                padding: 10px 0 !important;
+            }
+
+            .social-media img {
+                width: 30px !important;
+            }
+            .social-media a {
+                padding: 0 3px 0 0 !important;
+            }
+
+            .social-media a:last-of-type {
+                padding-right: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin:0; ">
+    <table style="border: none; margin: 0 auto ; padding: 0;">
+        <tr>
+            <td style="padding: 0; background-color: #FFFFFF;">
+
+                <div style="max-width: 1250px; min-width: 200px; font-family: 'Arial', sans-serif; font-size: 16px; background-color: #FFFFFF; line-height: 1.4; color: #4A4A4A; border: 1px solid #DFDFDF; border-radius: 10px; overflow: hidden;">
+
+                    <div style="background-color: #EAAF47; height: 60px;">
+                    </div>
+
+                    <header style="text-align: center;">
+                        <h1 style="font-size: 58px;color: #EAAF47; background: #FFFFFF; margin-top: 30px; margin-bottom: 0; text-transform: uppercase;">Sodium Alginate</h1>
+                        <p style="margin: 0; padding-bottom: 30px; font-size:18px;">Zero Waste Products</p>
+                    </header>
+
+<!--                    <div style="padding: 0 20px;">-->
+<!--                        <img src="{% static 'n_product/image-assets/sea_weed2.jpg' %}" alt="email hero image" style="display: block; background-size: cover; width: 100%;">-->
+<!--                    </div>-->
+
+<!--                    <h2 style="font-size: 32px; padding: 30px 20px 0 20px; margin-bottom: 0; text-transform: uppercase; color: #4A4A4A;">Our Products</h2>-->
+
+                    <ul style="padding: 0 20px;">
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex; justify-content:space-between;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/Ooho-packaging.jpg' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px;" class="remove-flex-basis-mobile">
+                                    <a href="#"> <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Edible Water Pods</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                    With over 7,500 km of coastline, India has easy access to abundant marine treasure in the form of seaweed. True, it can be argued that the seas should be kept safe from human intrusion. However, if you understand the impact that something as small as a straw or as massively used as plastic bottles has on marine life and health, seaweed alternatives to single-use plastic products can be seen in a fairly positive light.
+                                    </p></a>
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/straw.jpg' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Sea-Weed Straws</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                    One may say that the oceans are too big to be damaged by a small straw, but that’s exactly where the problem lies.
+                                    Whether you are a fan of coconut water or like to drink juice to end your meal, by using a plastic straw, you are contributing to marine pollution.
+                                    Loliware, a US-based company has developed a dissolvable straw made of seaweed. With the tagline, ‘designed to disappear’, the organisation promises to replace the wasteful plastic straws with these eco-friendly alternatives.                                    </p>
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex; justify-content:space-between;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/packages.jpg' %}" alt="" style="display: block; width: 100%; height:100%">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px;" class="list-header">Biodegradable Packages</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0;">
+                                    The durable, odourless packaging material made from seaweed can be used to pack, say the seasoning of instant noodles, cereal, single-serving coffee or sugar sachets, and burger wraps. Considering the amount of single-use packs and sachets India uses, such technology can be developed further to replace plastic.
+                                    </p>
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/fertilizers.jpg' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Sea-Weed Fertilizers</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                    Seaweed not only promotes healthy growth of the tomato plants but also prevents blossom end rot, the most commonly occurring problem in tomatoes. Other fruits and vegetables that like seaweed fertiliser are lady's finger, potatoes, sweet corn, strawberries, apples, oranges, and capsicum. The large brown algae, for example Macrocystis and Ascophyllum, are the principal species used for manure. Their value as a fertilizer derives not so much from their nitrogen, phosphorus and potassium contents but rather from their unusual properties as a soil conditioner and growth promoter. Seaweed fertilizer has been demonstrated to produce positive effects additional to those to be expected from their content of N, K and P.1 For example, seaweeds and liquid seaweed manures appear to promote resistance to plant diseases and plant pests, induce fruit setting and increase germination rates.
+                                    </p>
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/fuel.PNG' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Sea-Weed BioFuel</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                        Kelp is transformed into biofuel by a process called thermochemical liquefaction. The kelp is dried out, and the salt is washed away. Then it's turned into bio-oil through a high-temperature, high-pressure conversion process.                                    </p>
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/wound_care.jpg' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Sea-Weed Wound Dressing</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                        There are few clinical trials to support therapeutic recommendations for seaweeds. However, seaweeds are an important source of minerals and are low in sodium. They may be useful in heart conditions due to cholesterol reduction and appetite suppression. Alginates extracted from seaweed have been used in wound dressings.
+                                      </p>
+
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li style="list-style-type: none; padding-bottom: 50px; margin-left: 0;">
+                            <div class="remove-flex-mobile" style="display:flex;">
+                                <div style="flex-basis: 90%;" class="remove-flex-basis-mobile">
+                                    <img src="{% static 'n_product/image-assets/BodyCream.jpg' %}" alt="" style="display: block; width: 100%;">
+                                </div>
+                                <div style="flex-basis: 100%; padding-left: 30px; width: 100%;" class="remove-flex-basis-mobile">
+                                    <h3 style="text-transform: uppercase; font-size: 28px; margin-top: 0; margin-bottom: 10px; color: #4A4A4A" class="list-header">Sea-Weed Cosmetics</h3>
+                                    <p style="padding-bottom: 20px; margin-top: 0; color: #4A4A4A">
+                                        There are few clinical trials to support therapeutic recommendations for seaweeds. However, seaweeds are an important source of minerals and are low in sodium. They may be useful in heart conditions due to cholesterol reduction and appetite suppression. Alginates extracted from seaweed have been used in wound dressings.
+                                      </p>
+
+<!--                                    <a href="" style="text-decoration: none; text-transform: uppercase; cursor: pointer; line-height: 1.1em; letter-spacing: 0; padding: 12px; background: #EAAF47; color: #4A4A4A; border-radius: 8px; text-align: center; font-size: 16px; font-weight: bold; box-sizing: border-box;">Read More</a>-->
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- Footer -->
+
+
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}
+</body>
+</html>

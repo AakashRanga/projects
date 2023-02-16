@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "client/home.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+<title>Talent Application Form a Flat Responsive Widget Template :: w3layouts </title>
+	<!-- Meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Talent Application Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Meta tags -->
+	<!--stylesheets-->
+<link href="{% static 'product_looking_for/css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+<!--//style sheet end here-->
+<!-- Calendar -->
+<link rel="stylesheet" href="{% static 'product_looking_for/css/jquery-ui.css' %}" />
+<!-- //Calendar -->
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<script>
+
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+</script>
+<body>
+     <h1 class="header-w3ls">
+Chemical Analyses Process
+	 </h1>
+
+<div class="appointment-w3">
+    <form action="/specific_product/" method="post">
+		{% csrf_token %}
+<div class="personal">
+
+<h2>Product Details</h2>
+
+  					<div class="form-left-w3l" style="width:273px;">
+					<p>Product</p>
+					<select class="form-control buttom" name="product">
+						<option value="edible water pods">Edible Water Pods</option>
+						<option value="straws">Straws</option>
+						<option value="packages">Packages</option>
+						<option value="cosmetics">Cosmetics</option>
+						<option value="fertilizers">Fertilizers</option>
+						<option value="wound care">Wound Care</option>
+						<option value="bio fuel">Bio Fuel</option>
+					</select>
+					</div>
+
+					<div class="form-right-w3ls " >
+						<p>Reason</p>
+						<select class="form-control buttom" name="reason" style="width:273px;">
+						<option value="plastics water bottles">Plastics Water Bottles</option>
+						<option value="plastic straws">Plastic Straws</option>
+							<option value="plastic package">Plastic Packages</option>
+						<option value="toxic cosmetics">Toxic Cosmetics</option>
+						<option value="chemical fertilizers">Chemical Fertilizers</option>
+						<option value="woven dressing">Woven Dressing</option>
+						<option value="non renewable fuel">Non renewable Fuel</option>
+					</select>
+						 <div class="clear"></div>
+					</div>
+
+		   <div class="form-left-w3l" >
+			<p>Quantity</p>
+				   <input type="text"  name="quantity" placeholder="Quantity(MAX 20KG)" required="">
+			</div>
+
+			<div class="form-right-w3ls ">
+						<p>Duration</p>
+						<input type="text" name="duration" placeholder="MONTHS(MAX 3)"  required="">
+						 <div class="clear"></div>
+					</div>
+
+	<div class="clear"></div>
+	       <div class="form-add-w3ls">
+			<p>Quality</p>
+					<select class="form-control buttom" name="quality" style="width:610px;">
+						<option value="first grade">First Grade</option>
+						<option value="second grade">Second Grade</option>
+						<option value="third grade">Third Grade</option>
+
+					</select>
+		   </div>
+
+			<input type="email" style="visibility:hidden;" name="email" value="aakashbsurya@gmail.com" >
+
+		      <div class="clear"></div>
+</div>
+
+ <input type="submit" value="Submit" style="width:610px;">
+</form>
+   </div>
+
+
+		<!-- js -->
+  <script type='text/javascript' src="{% static 'product_looking_for/js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!-- Calendar -->
+				<link rel="stylesheet" href="{% static 'product_looking_for/css/jquery-ui.css' %}" />
+				<script src="{% static 'product_looking_for/js/jquery-ui.js' %}"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+
+{% endblock %}
+</body>
+</html>

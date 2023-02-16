@@ -1,0 +1,142 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save Data">
+</form>
+<p id="msg">{{message}}</p>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--{% load static %}-->
+<!--<body>-->
+<!--	<h1>Demo: confirm() </h1>-->
+<!--	<button onclick="save()">Save Data</button>-->
+<!--	<p id="msg"></p>-->
+
+<!--	<script>-->
+<!--		function save(){-->
+<!--		  var userPreference;-->
+
+<!--			if (confirm("Do you want to save changes?") == true) {-->
+<!--				userPreference = "Data saved successfully!";-->
+<!--			} else {-->
+<!--				userPreference = "Save Canceled!";-->
+<!--			}-->
+
+<!--			document.getElementById("msg").innerHTML = userPreference;-->
+<!--		}-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--	<style>-->
+<!--@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);-->
+<!--* {-->
+<!--    margin: 0;-->
+<!--    padding: 0;-->
+<!--    box-sizing: border-box;-->
+<!--    font-family: 'Poppins', sans-serif;-->
+<!--}-->
+<!--body {-->
+<!--    display: grid;-->
+<!--    place-items: center;-->
+<!--    min-height: 100vh;-->
+<!--    background-color: rgb(0, 0, 15);-->
+<!--}-->
+
+
+<!--.container {-->
+<!--    display: flex;-->
+<!--}-->
+<!--.num {-->
+<!--    color: #fff;-->
+<!--    background-color: transparent;-->
+<!--    width: 100px;-->
+<!--    text-align: center;-->
+<!--    outline: none;-->
+<!--    padding: 2rem 1rem;-->
+<!--    margin: 0 1rem;-->
+<!--    font-size: 3rem;-->
+<!--    border: 1px solid rgba(255, 255, 255, .3);-->
+<!--    border-radius: .5rem;-->
+<!--    color: rgba(0, 255, 0, .5);-->
+<!--}-->
+<!--.space {-->
+<!--    width: 3rem;-->
+<!--}-->
+<!--.num:focus,-->
+<!--.num:valid {-->
+<!--    box-shadow: 0 0 .5rem rgba(0, 255, 0, .5),-->
+<!--                inset 0 0 .5rem rgba(0, 255, 0, .5);-->
+<!--    border-color: rgba(0, 255, 0, .5);-->
+<!--}-->
+
+<!--	</style>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <script src="app.js" defer></script>-->
+<!--    <title>OTP/PIN Input Field - JavaScript</title>-->
+<!--     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+
+<!--{% for m in messages %}-->
+<!--      swal({-->
+<!--  title: "Are you sure?",-->
+<!--  text: "Once You Login, your account will block if multiple failure occurs!!!",-->
+<!--  icon: "warning",-->
+<!--  buttons: true,-->
+<!--  dangerMode: true,-->
+<!--})-->
+<!--.then((willDelete) => {-->
+<!--  if (willDelete) {-->
+<!--    swal("You have logged In Sucessfully", {-->
+<!--      icon: "success",-->
+<!--    });-->
+<!--  } else {-->
+<!--    swal("Your account is safe!");-->
+<!--  }-->
+<!--});-->
+<!--{% endfor %}-->
+
+<!--</script>-->
+
+
+<!--    <form action="">-->
+<!--        <div class="container">-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--            <div class="space"></div>-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--            <input type="text" class="num" maxlength="1" required>-->
+<!--        </div>-->
+<!--    </form>-->
+
+<!--    <script>-->
+<!--        const nums = document.querySelectorAll('.num')-->
+<!--        const form = document.querySelector('form')-->
+
+<!--        nums.forEach((num, index) => {-->
+<!--            num.dataset.id = index-->
+
+<!--            num.addEventListener('keyup', () => {-->
+<!--                if (num.value.length == 1) {-->
+<!--                    if (nums[nums.length - 1].value.length == 1) form.submit()-->
+<!--                    nums[parseInt(num.dataset.id) + 1].focus()-->
+<!--                }-->
+<!--            })-->
+<!--        })-->
+<!--	</script>-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="invention_on_macroalgae.administrator_app.views.Product_looking_for" />
+          <option value="invention_on_macroalgae.administrator_app.views.Specific_product" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

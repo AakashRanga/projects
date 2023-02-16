@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>Attacker Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Bike World Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="{% static 'hacker_home/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet" href="{% static 'hacker_home/css/style.css' %}" type="text/css" media="all" />
+
+<link href="{% static 'hacker_home/css/font-awesome.css' %}" rel="stylesheet">
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+
+<script src="{% static 'hacker_home/js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'hacker_home/js/bootstrap.js' %}"></script>
+<script src="{% static 'hacker_home/js/SmoothScroll.min.js' %}"></script>
+<script src="{% static 'hacker_home/js/jarallax.js' %}"></script>
+</head>
+<body>
+{% block content %}
+	<!-- banner -->
+	<div class="banner" >
+
+		<div class="w3ls-slider" >
+			<div class="header-top" >
+				<div class="container banner-drop">
+					<div class="agile-logo">
+						<h1><a href="index.html">HACKERS<span>PAGE</span></a></h1>
+					</div>
+					<div class="header-right">
+							<nav>
+							  <ul>
+								<li class="active">
+									<a href="/"><span>Home</span></a>
+								</li>
+								<li>
+									<a href="/se/"><span>Social Engineering</span></a>
+								</li>
+								<li>
+									<a href="/hacked_details/"><span>User Details</span></a>
+								</li>
+								<li>
+									<a href="/ha_login/"><span>Attack</span></a>
+								</li>
+
+							  </ul>
+							</nav>
+							<div class="menu-icon"><span></span></div>
+					</div>
+					<div class="clearfix"> </div>
+					<script>
+						(function($){
+						  $(".menu-icon").on("click", function(){
+								$(this).toggleClass("open");
+								$(".container").toggleClass("nav-open");
+								$("nav ul li").toggleClass("animate");
+						  });
+
+						})(jQuery);
+					</script>
+				</div>
+		</div>
+
+	</div>
+	</div>
+	<!-- //banner -->
+
+
+
+</body>
+{% endblock %}
+</html>

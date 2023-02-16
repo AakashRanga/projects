@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<head>
+    <style>
+        /* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+    </style>
+    <title>Pay slip</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Payment Tab Widget a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="{% static 'client_payment/css/style.css' %}" type="text/css" media="all">
+    <!-- easy-responsive-tabs css -->
+    <link rel="stylesheet" href="{% static 'client_payment/css/easy-responsive-tabs.css' %}" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+</head>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<body>
+    <h1 class="title-agile text-center">Payment Integration</h1>
+    <div class="w3ls-main" style="margin-left:250px;">
+        <!--/tabs-->
+        <div class="responsive_tabs w3ls_tab">
+            <div id="horizontalTab">
+                <ul class="resp-tabs-list">
+                    <li>Credit/Debit</li>
+<!--                    <li>Net Banking</li>-->
+                    <li>Paypal Account</li>
+                </ul>
+                <div class="resp-tabs-container">
+                    <!--tab_one-->
+                    <div class="tab1">
+                        <div class="agile_pay">
+                            <form action="/payment/" method="post" class="creditly-card-form shopf-sear-headinfo_form">
+                                {% csrf_token %}
+                                <section class="creditly-wrapper payf_wrapper">
+                                    <div class="credit-card-wrapper">
+                                        <div class="first-row form-group">
+                                            <div class="controls">
+                                                <label class="control-label">Name on Card</label>
+                                                <input class="billing-address-name form-control" type="text" name="name" placeholder="Aakash Ranga">
+                                            </div>
+                                            <div class="paymntf_card_number_grids">
+                                                <div class="fpay_card_number_grid_left">
+                                                    <div class="controls">
+                                                        <label class="control-label">Card Number</label>
+                                                        <input class="number credit-card-number form-control" type="text" name="number" inputmode="numeric" autocomplete="cc-number"
+                                                            autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+                                                    </div>
+                                                </div>
+                                                <div class="fpay_card_number_grid_right">
+                                                    <div class="controls">
+                                                        <label class="control-label">CVV</label>
+                                                        <input class="security-code form-control" Â· inputmode="numeric" type="text" name="security-code" placeholder="&#149;&#149;&#149;">
+                                                    </div>
+                                                </div>
+                                                <div class="clear"> </div>
+                                            </div>
+                                            <div class="controls">
+                                                <label class="control-label">Expiration Date</label>
+                                                <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+                                            </div>
+                                            <div class="controls">
+                                                <label class="control-label">Amount</label>
+                                                <p class="expiration-month-and-year form-control" type="text" name="amount" placeholder="${{purchases.total|floatformat:2}}">${{final|floatformat:2}}</p>
+                                            </div>
+                                        </div>
+
+                                         {% for d in pro_d %}
+                                        <button class="button-27" role="button" >
+                                            <a href="/c_mail/{{d.id}}/" style="color: #0095ff;">Proceed Payment </a>
+                                        </button>
+
+
+                                    </div>
+                                </section>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- //tab one -->
+<!--
+                    <!-- tab three -->
+                    <div class="tab3">
+                        <div class="agile_pay">
+
+                            <div class="paypal_agile">
+                                <form action="/payment/" method="post" class="creditly-card-form shopf-sear-headinfo_form">
+                                    {% csrf_token %}
+                                    <section class="creditly-wrapper payf_wrapper">
+                                        <div class="credit-card-wrapper">
+                                            <div class="first-row form-group">
+                                                <div class="controls">
+                                                    <label class="control-label">Card Holder </label>
+                                                    <input class="billing-address-name form-control" type="text" name="name" placeholder="Aakash Ranga">
+                                                </div>
+                                                <div class="paymntf_card_number_grids">
+                                                    <div class="fpay_card_number_grid_left">
+                                                        <div class="controls">
+                                                            <label class="control-label">Card Number</label>
+                                                            <input class="number credit-card-number form-control" type="text" name="number" inputmode="numeric" autocomplete="cc-number"
+                                                                autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="fpay_card_number_grid_right">
+                                                        <div class="controls">
+                                                            <label class="control-label">CVV</label>
+                                                            <input class="security-code form-control" Â· inputmode="numeric" type="text" name="security-code" placeholder="&#149;&#149;&#149;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"> </div>
+                                                </div>
+                                                <div class="controls">
+                                                    <label class="control-label">Valid Thru</label>
+                                                    <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+                                                </div>
+                                                <div class="controls">
+                                                    <label class="control-label">Amount</label>
+                                                    <p class="expiration-month-and-year form-control" type="text" name="amount"  >${{purchases.total|floatformat:2}}</p>
+                                                </div>
+                                            </div>
+
+                                           <button class="button-27" role="button" >
+                                               <a href="/c_mail/{{d.id}}/" style="color: #0095ff;">
+                                            Make Payment
+                                            </a>
+                                        </button>
+
+
+                                            {% endfor %}
+
+
+<!--                                            <input class="btn btn-primary submit" type="submit" value="Proceed Payment">-->
+
+
+
+                                        </div>
+                                    </section>
+                                </form>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- //tab three -->
+                </div>
+            </div>
+        </div>
+        <!--//tabs-->
+    </div>
+    <!-- //payment -->
+    <!-- Common js -->
+    <script type="text/javascript" src="{% static 'client_payment/js/jquery-2.2.3.min.js' %}"></script>
+    <!--// Common js -->
+    <!-- easy-responsive-tabs -->
+    <script src="{% static 'client_payment/js/easy-responsive-tabs.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                closed: 'accordion', // Start closed if in accordion view
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+        });
+    </script>
+    <!-- //easy-responsive-tabs -->
+    <!-- credit-card -->
+    <script src="{% static 'client_payment/js/creditly.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'client_payment/css/creditly.css' %}" type="text/css" media="all" />
+    <script>
+        $(function () {
+            var creditly = Creditly.initialize(
+                '.creditly-wrapper .expiration-month-and-year',
+                '.creditly-wrapper .credit-card-number',
+                '.creditly-wrapper .security-code',
+                '.creditly-wrapper .card-type');
+
+            $(".creditly-card-form .submit").click(function (e) {
+                e.preventDefault();
+                var output = creditly.validate();
+                if (output) {
+                    // Your validated credit card output
+                    console.log(output);
+                }
+            });
+        });
+    </script>
+    <!-- //credit-card -->
+
+</body>
+<!-- //Body -->
+
+</html>

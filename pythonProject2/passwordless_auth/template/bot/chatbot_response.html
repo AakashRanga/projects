@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAT WITH ME</title>
+    <link rel="stylesheet" href="{% static 'allow_users/side_bar/style.css' %}" />
+	  <link rel="stylesheet" href="{% static 'allow_users/css/style.css' %}">
+	  <link rel="stylesheet" href="{% static 'allow_users/delete_button/css/style.css' %}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'bot/style.css' %}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style>
+      .element-selector {
+      height: 200px; /* set the height of the element */
+      overflow-y: scroll; /* add a vertical scrollbar when the content overflows the element */
+      }
+    </style>
+  </head>
+  <body style="background-image: url({% static 'robot/images/robot-1.jpg' %}); background-size: cover;">
+   <script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+  </script>
+  <section class="sidebar" >
+      <div class="nav-header" >
+<!--        <p class="logo">Authentication</p>-->
+        <i class="bx bx-menu-alt-right btn-menu"></i>
+      </div>
+      <ul class="nav-links">
+
+        <li>
+          <a href="/admin_home/">
+            <i class="fas fa-home"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+		  <li>
+          <a href="/chat_bot/">
+			  <i class="fas fa-robot"></i>
+
+            <span class="title">Help Desk</span>
+          </a>
+          <span class="tooltip">Help Desk</span>
+        </li>
+		  {% if user.admin_status %}
+		  <li>
+          <a href="/allow_users/">
+			  <i class="fas fa-user-plus"></i>
+
+            <span class="title">Allow Users</span>
+          </a>
+          <span class="tooltip">Allow Users</span>
+        </li>
+		  {% endif %}
+
+        <li>
+          <a href="/_message/">
+			  <i class="fas fa-envelope"></i>
+			  <span class="title">Message App</span>
+          </a>
+          <span class="tooltip">Message App</span>
+        </li>
+        <li>
+          <a href="/_gallery/">
+            <i class='bx bxs-folder-open'></i>
+            <span class="title">Files</span>
+          </a>
+          <span class="tooltip">Files</span>
+        </li>
+		  <li>
+          <a href="/robot_home/">
+            <i class="fas fa-sync-alt"></i>
+            <span class="title">Robot</span>
+          </a>
+          <span class="tooltip">Robot</span>
+        </li>
+        <li>
+          <a href="/security_home/">
+			<i class="fas fa-lock"></i>
+            <span class="title">Security Alert</span>
+          </a>
+          <span class="tooltip">Security Alert</span>
+        </li>
+
+        <li>
+          <a href="/user_logout/">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="title">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+    </section>
+    <div class="container" >
+      <div class="inputbox" style="background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );">
+        <form method="post">
+          {% csrf_token %}
+        <input type="text" placeholder="Enter your question" name="prompt" id="question" style="background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );"/>
+        <button id="btn">Answer</button>
+        </form>
+      </div>
+    </div>
+    <div  id="result" style="background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );">
+        <p class="element-selector" id="resulttext">
+           {{ response }}
+        </p>
+    </div>
+    <script src="{% static 'bot/script.js' %}"></script>
+  <script src="{% static 'allow_users/delete_button/css/app.js' %}"></script>
+	<script src="{% static 'allow_users/js/jquery.min.js' %}"></script>
+  <script src="{% static 'allow_users/js/popper.js' %}"></script>
+  <script src="{% static 'allow_users/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'allow_users/js/main.js' %}"></script>
+
+    <script>
+      const btn_menu = document.querySelector(".btn-menu");
+      const side_bar = document.querySelector(".sidebar");
+
+      btn_menu.addEventListener("click", function () {
+        side_bar.classList.toggle("expand");
+        changebtn();
+      });
+
+      function changebtn() {
+        if (side_bar.classList.contains("expand")) {
+          btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+  </body>
+</html>

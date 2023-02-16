@@ -1,0 +1,97 @@
+product,Reason,Quantity,Duration,Quality,Solution
+edible water pods,plastics water bottles,20,1,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,10,2,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,5,3,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,7,3,third grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,15,2,third grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,5,1,third grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,15,2,third grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,20,2,third grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,13,2,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,17,2,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,12,1,first grade,calcium lactate or calcium chloride
+edible water pods,plastics water bottles,18,1,first grade,calcium lactate or calcium chloride
+straws,plastic straws,7,1,fist grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,3,3,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,14,3,third grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,15,3,third grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,19,3,third grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,16,1,third grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,20,1,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,10,3,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,12,2,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,9,1,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,4,3,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,11,3,fist grade,"Bacterial Cellulose, Rice, wheat, corn"
+straws,plastic straws,19,2,second grade,"Bacterial Cellulose, Rice, wheat, corn"
+cosmetics,toxic cosmetics,4,3,fist grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,3,1,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,2,1,third grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,1,1,fist grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,5,1,fist grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,7,1,fist grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,9,1,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,8,1,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,10,2,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,12,2,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,13,2,second grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,20,2,third grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,10,2,third grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+cosmetics,toxic cosmetics,19,2,third grade,"Hydrocolloids, Cellulose Gum, Sodium Stearoyl Lactylate"
+fertilizers,chemical fertilizers,2,2,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,13,2,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,18,3,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,11,1,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,5,2,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,7,1,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,9,2,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,8,3,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,10,1,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,12,2,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,13,1,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,20,2,third grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,10,1,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,20,3,first grade,"magnesium, potassium, zinc, iron and nitrogen"
+fertilizers,chemical fertilizers,19,1,second grade,"magnesium, potassium, zinc, iron and nitrogen"
+wound care,woven dressing,12,2,first grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,11,2,first grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,1,2,first grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,10,3,first grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,19,3,first grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,18,3,second grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,20,1,second grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,16,1,second grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,3,2,third grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,5,2,third grade,"polysaccharide, mannuronic and guluronic acid units"
+wound care,woven dressing,7,2,third grade,"polysaccharide, mannuronic and guluronic acid units"
+bio fuel,non renewable fuel,13,1,first grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,14,2,second grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,15,3,third grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,2,3,second grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,20,3,first grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,12,2,second grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,4,2,third grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,6,2,third grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,8,1,second grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,10,2,first grade,sulfonated graphene oxide
+bio fuel,non renewable fuel,11,1,second grade,sulfonated graphene oxide
+packages,plastic package,19,1,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,20,2,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,2,3,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,5,1,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,8,2,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,9,3,second grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,10,1,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,14,2,second grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,11,3,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,20,1,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,15,2,second grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,17,3,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,12,2,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,10,1,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,14,2,second grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,1,3,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,2,1,first grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,9,1,second grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,1,1,third grade,Bacteriocins or enzymes or chitosan
+packages,plastic package,7,1,first grade,Bacteriocins or enzymes or chitosan

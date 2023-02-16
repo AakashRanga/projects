@@ -1,0 +1,344 @@
+<html>
+{% extends 'mf_ta/home.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+
+
+  <script src="	https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+  <style>
+
+#bg{
+background-size: 1800px 900px;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+}
+
+    body{
+    background: #ddd3;
+    height: 100%;
+    width: 100%;
+    vertical-align: center;
+    display: flex;
+    font-family: Muli;
+    font-size: 14px;
+}
+.card{
+    margin: auto;
+    width: 58%;
+    max-width:600px;
+    padding: 4vh 0;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top: 3px solid rgb(252, 103, 49);
+    border-bottom: 3px solid rgb(252, 103, 49);
+    border-left: none;
+    border-right: none;
+}
+@media(max-width:768px){
+    .card{
+        width: 90%;
+    }
+}
+.title{
+    color: rgb(252, 103, 49);
+    font-weight: 600;
+    margin-bottom: 2vh;
+    padding: 0 8%;
+    font-size: initial;
+}
+#details{
+    font-weight: 400;
+}
+.info{
+    padding: 5% 8%;
+}
+.info .col-5 {
+    padding: 0;
+}
+#heading{
+    color: grey;
+    line-height: 6vh;
+}
+.pricing{
+    background-color: #ddd3;
+    padding: 2vh 8%;
+    font-weight: 400;
+    line-height: 2.5;
+}
+.pricing .col-3{
+    padding: 0;
+}
+.total{
+    padding: 2vh 8%;
+    color: rgb(252, 103, 49);
+    font-weight: bold;
+}
+.total .col-3{
+    padding: 0;
+}
+.footer{
+    padding: 0 8%;
+    font-size: x-small;
+    color: black;
+}
+.footer img{
+    height: 5vh;
+    opacity: 0.2;
+}
+.footer a{
+    color: rgb(252, 103, 49);
+}
+.footer .col-10, .col-2{
+    display: flex;
+    padding: 3vh 0 0;
+    align-items: center;
+}
+.footer .row{
+    margin: 0;
+}
+#progressbar {
+    margin-bottom: 3vh;
+    overflow: hidden;
+    color: rgb(252, 103, 49);
+    padding-left: 0px;
+    margin-top: 3vh
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: x-small;
+    width: 24%;
+    float: left;
+    position: relative;
+    font-weight: 800;
+    color: rgb(160, 159, 159);
+}
+
+#progressbar #step1:before {
+    content: "";
+    color: rgb(252, 103, 49);
+    width: 5px;
+    height: 5px;
+    margin-left: 0px !important;
+    /* padding-left: 11px !important */
+}
+
+#progressbar #step2:before {
+    content: "";
+    color: #fff;
+    width: 5px;
+    height: 5px;
+    margin-left: 42%;
+}
+
+#progressbar #step3:before {
+    content: "";
+    color: #fff;
+    width: 5px;
+    height: 5px;
+    margin-right: 32% ;
+    /* padding-right: 11px !important */
+}
+
+#progressbar #step4:before {
+    content: "";
+    color: #fff;
+    width: 5px;
+    height: 5px;
+    margin-right: 0px !important;
+    /* padding-right: 11px !important */
+}
+
+#progressbar li:before {
+    line-height: 29px;
+    display: block;
+    font-size: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: auto;
+    z-index: -1;
+    margin-bottom: 1vh;
+}
+
+#progressbar li:after {
+    content: '';
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    margin-bottom: 2vh;
+    top: 1px;
+    z-index: 1;
+}
+.progress-track{
+    padding: 0 8%;
+}
+#progressbar li:nth-child(2):after {
+    margin-right: auto;
+}
+
+#progressbar li:nth-child(1):after {
+    margin: auto;
+}
+
+#progressbar li:nth-child(3):after {
+    float: left;
+    width: 68%;
+}
+#progressbar li:nth-child(4):after {
+    margin-left: auto;
+    width: 132%;
+}
+
+#progressbar  li.active{
+    color: black;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: rgb(252, 103, 49);
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:grey;
+}
+
+.button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+  </style>
+</head>
+
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<body id="bg" style="background-image: url('{% static "img/bg11.jpg"%}')";>
+
+<div class="card" style="margin-top:100px; margin-left:-700px; width:600px; background-color:white;">
+
+            <div class="title">Purchase Reciept</div>
+              <div class="info">
+
+
+                    {% for d in pro_d %}
+
+                    <div class="col-7">
+                        <span id="heading">ORDERED DATE :</span>
+                        <span id="step1">{{d.date_add}}</span>
+                        <span id="heading">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END DATE :</span>
+                        <span id="step1">{{end_day}}</span>
+                    </div>
+                    <div class="col-7">
+                        <span id="heading">PRODUCT :</span>
+                        <span id="details">{{d.product}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </span>
+                        <img style="height:10%; width:25%;" class="avatar" src="{{products.imageURL}}">
+                    </div>
+                    <div class="col-7">
+                        <span id="heading">QUANTITY :</span>
+                        <span id="details">{{d.quantity}} KG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span id="heading">QUALITY :</span>
+                        <span id="details">{{d.quality}}</span>
+                    </div>
+<!--                    <div class="col-7">-->
+
+<!--                    </div>-->
+<!--                    <div class="col-7">-->
+<!--                        <span id="heading">DURATION : </span>-->
+<!--                        <span id="details">{{d.duration}} Months</span>-->
+<!--                    </div>-->
+
+                    {% endfor %}
+
+
+                    <div class="col-7">
+                            <span id="heading">PRICE :</span>
+                            <span id="step1">${{products.price|floatformat:2}} </span>
+                    </div>
+
+                     <div class="col-7">
+                            <span id="heading">TOTAL :</span>
+                            <span id="step1">${{purchases.total|floatformat:2}}</span>
+                    </div>
+
+                  <div class="col-7">
+                      <a href="/admin_final/">
+                          <button class="button-42" role="button">Completed</button>
+                      </a>
+                  </div>
+
+                </div>
+
+            <div class="tracking">
+                <div class="title">Tracking Order</div>
+            </div>
+            <div class="progress-track">
+
+                <ul id="progressbar">
+                    <li class="step0 active " id="step1">Procurement</li>
+                    <li class="step0 active text-center" id="step2">Quality</li>
+                    <li class="step0 active text-right" id="step3">Admin</li>
+                    <li class="step0 text-right" id="step4">Shipping</li>
+                </ul>
+
+            </div>
+
+
+<!--            <div class="footer">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/YBWc55P.png"></div>-->
+<!--                    <div class="col-10">Want any help? Please &nbsp;<a> contact us</a></div>-->
+<!--                </div>-->
+
+
+<!--            </div>-->
+        </div>
+
+</body>
+{% endblock %}
+</html>
+
+
+
+
+
+

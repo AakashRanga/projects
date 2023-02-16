@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "client/home.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+<title>Talent Application Form a Flat Responsive Widget Template :: w3layouts </title>
+	<!-- Meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Talent Application Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Meta tags -->
+	<!--stylesheets-->
+<link href="{% static 'product_looking_for/css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+<!--//style sheet end here-->
+<!-- Calendar -->
+<link rel="stylesheet" href="{% static 'product_looking_for/css/jquery-ui.css' %}" />
+<!-- //Calendar -->
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+     <h1 class="header-w3ls">
+
+	 </h1>
+<div class="appointment-w3">
+    <form action="/product_looking_for/" method="post">
+		{% csrf_token %}
+<div class="personal">
+<h2>Company Details</h2>
+
+  					<div class="form-left-w3l">
+					<p>Company Name</p>
+						<input type="text" name="company_name" placeholder="Company Name" required="">
+					</div>
+					   <div class="form-right-w3ls ">
+						<p>Phone</p>
+						<input type="text" name="phone_number" placeholder="Company Number"  required="">
+						 <div class="clear"></div>
+					</div>
+		   <div class="form-left-w3l">
+			<p>Email</p>
+				   <input type="email"  name="email" placeholder="Mail@example.com" required="">
+			</div>
+           <div class="form-right-w3ls">
+			   <p>Company Type</p>
+					<select class="form-control buttom" name="company_type" style="width:273px;">
+						<option value="">Please select</option>
+						<option value="Restaurant">Restaurant</option>
+						<option value="Medical">Medical</option>
+						<option value="Cosmetics">Cosmetics</option>
+						<option value="Fertilizers">Fertilizers</option>
+						<option value="IT">IT</option>
+						<option value="Fuel Manufacturing">Fuel Manufacturing</option>
+					</select>
+		   </div>
+	<div class="clear"></div>
+	       <div class="form-add-w3ls" style="width:600px;">
+			<p>Product Looking For</p>
+					<select class="form-control buttom" name="product">
+						<option value="">Please select</option>
+						<option value="edible water pods">Edible Water pods</option>
+						<option value="straws">Straws</option>
+						<option value="cosmetics">Cosmetics</option>
+						<option value="fertilizing">Fertilizing</option>
+						<option value="medical">Medical</option>
+						<option value="fuel">Fuel</option>
+					</select>
+		   </div>
+
+
+			<div class="form-left-w3l">
+
+			<p>License Number</p>
+						<input type="text" name="licence_number" placeholder="License Number"  required="">
+			</div>
+			<div class="form-right-w3ls">
+			<p>License Document</p>
+				   <input type="file"  name="licence_document" placeholder="License Document" required="">
+			</div>
+
+
+		      <div class="clear"></div>
+</div>
+<div class="information">
+ <h3> Company Address</h3>
+
+				 <div class="form-add-w3ls">
+			<p>Address</p>
+				<input type="text" name="address" placeholder="Address" required="">
+		   </div>
+		   		   <div class="form-left-w3l">
+			<p>City</p>
+				   <input type="text" name="city" placeholder="City" required="">
+			</div>
+           <div class="form-right-w3ls ">
+			<p>State</p>
+				<input type="text" name="state" placeholder="State" required="">
+		   </div>
+		   <div class="clear"></div>
+		               <div class="form-left-w3l">
+			<p>Pin code</p>
+				<input type="text" name="pin" placeholder="Pin code" required="">
+		   </div>
+
+	       <div class="form-right-w3ls" >
+			   <p>Country</p>
+					<select class="form-control buttom" name="country" style="width:273px;">
+						<option value="">Please select</option>
+						<option value="India">India</option>
+						<option value="Australia">Australia</option>
+						<option value="America">America</option>
+						<option value="London">London</option>
+						<option value="United States">United States</option>
+						<option value="Canada">Canada</option>
+						<option value="Eelam">Eelam</option>
+					</select>
+
+		   </div>
+		    <div class="clear"></div>
+			</div>
+<div class="education">
+<h3>Query</h3>
+
+<div class="form-control-w3l">
+<p>Message</p>
+ <textarea name="message" placeholder="Message..."></textarea>
+ </div>
+ </div>
+ <input type="submit" value="Submit" style="width:605px;">
+</form>
+   </div>
+
+
+		<!-- js -->
+  <script type='text/javascript' src="{% static 'product_looking_for/js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!-- Calendar -->
+				<link rel="stylesheet" href="{% static 'product_looking_for/css/jquery-ui.css' %}" />
+				<script src="{% static 'product_looking_for/js/jquery-ui.js' %}"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+
+{% endblock %}
+</body>
+</html>

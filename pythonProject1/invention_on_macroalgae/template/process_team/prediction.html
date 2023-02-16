@@ -1,0 +1,61 @@
+<html>
+{% extends 'process_team/home.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+
+</head>
+<script>
+  $(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+</script>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<section   style="background: -webkit-linear-gradient(left, #25c481, #25b7c4);">
+  <h1>Analyse</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Reason</th>
+          <th>Quantity</th>
+          <th>Duration</th>
+          <th>Quality</th>
+          <th>Analyse</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+      {% for d in ds %}
+
+        <tr>
+          <td>{{d.product}}</td>
+          <td>{{d.reason}}</td>
+          <td>{{d.quantity}}</td>
+          <td>{{d.duration}}</td>
+          <td>{{d.quality}}</td>
+<!--          <td>{{predicted}}</td>-->
+          <td> <a href="/get_input/{{d.id}}/"> Prediction </a></td>
+
+{% endfor %}
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
+</html>
+
+

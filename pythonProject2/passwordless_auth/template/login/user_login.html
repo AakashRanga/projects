@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>User Login</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+<!--body {-->
+<!--    display: grid;-->
+<!--    place-items: center;-->
+<!--    min-height: 100vh;-->
+<!--    background-color: rgb(0, 0, 15);-->
+<!--}-->
+
+.container {
+    display: flex;
+}
+.num {
+    color: #fff;
+    background-color: transparent;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+    font-size: 3rem;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: .5rem;
+    color: rgba(0, 255, 0, .5);
+}
+.space {
+    width: 3rem;
+}
+.num:focus,
+.num:valid {
+    box-shadow: 0 0 .5rem rgba(0, 255, 0, .5),
+                inset 0 0 .5rem rgba(0, 255, 0, .5);
+    border-color: rgba(0, 255, 0, .5);
+}
+
+	</style>
+<!-- for-mobile-apps -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Landing Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+	<!-- animation css files -->
+	<link rel="stylesheet" href="{% static 'login/css/animation-aos.css' %}">
+	<link href="{% static 'login/css/aos.css' %}" rel='stylesheet prefetch' type="text/css" media="all" />
+	<!-- //animation css files -->
+
+	<!-- css files -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<link href="{% static 'login/css/bootstrap.css' %}" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="{% static 'login/css/style.css' %}" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="{% static 'login/css/fontawesome-all.css' %}" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<!-- //google fonts -->
+	 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+
+</script>
+
+<!-- header -->
+<header class="index-banner" >
+    <!-- nav -->
+    <nav class="main-header">
+      <div id="brand" data-aos="zoom-in-up">
+        <div id="logo">
+          <a href="/login_page/">
+
+			  <i style="color:white;" class="fab fa-asymmetrik"></i>
+          </a>
+        </div>
+        <div id="word-mark">
+          <h1>
+            <a href="/login_page/">PASSWORD LESS</a>
+          </h1>
+        </div>
+      </div>
+      <div id="menu">
+        <div id="menu-toggle">
+          <div id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up">
+          <li>
+            <a href="/" class="active">home</a>
+          </li>
+<!--          <li>-->
+<!--            <a href="#choose" class="scroll">Why Choose Us</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#overview" class="scroll">Overview</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#pricing" class="scroll">Pricing</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#faq" class="scroll">Faq's</a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#contact" class="scroll">Contact</a>-->
+<!--          </li>-->
+          <li>
+            <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false" data-target="#exampleModalCenter2">
+              Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- //nav -->
+	<!-- banner -->
+	<div class="banner layer" id="home"  style="height:900px;">
+		<div class="container">
+			<div class="row banner-text">
+				<div class="slider-info col-lg-8">
+					<div class="agileinfo-logo mt-5">
+						<h2 data-aos="fade-down">
+							 Modern Solution -
+						</h2>
+
+					</div>
+					<h3 class="txt-w3_agile" data-aos="fade-down">For Every New Technology </h3>
+					<a class="btn mt-4 mr-2 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal" data-target="#exampleModalCenter1" role="button">read more</a>
+					<a class="btn mt-4 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal" data-target="#exampleModal" role="button">watch video <i class="fas fa-play-circle"></i></a>
+				</div>
+				<div class="col-lg-4 col-md-8 mt-lg-0 mt-5 banner-form" data-aos="fade-left" style=" margin-left:-100px;  ">
+					<h5><i class="fas mr-2 fa-laptop"></i> Register Now</h5>
+					<form action="/login_page/" class="mt-4" method="post">
+						{% csrf_token %}
+						<input class="form-control" type="text" name="name" placeholder="Name" required="" />
+						<input class="form-control" type="email" name="email" placeholder="Email" required="" />
+						<input class="form-control" type="password" name="password" placeholder="Password" required="" />
+						<input class="form-control" type="text" name="phone" placeholder="Phone Number" required="" />
+						<h1 style="color:white;font-size:20px;" >Pattern</h1>
+						<br>
+						<div class="container" style="margin-left:-30px; ">
+							<input type="text" class="num" name="f1" maxlength="1" required>
+							<input type="text" class="num" name="f2" maxlength="1" required>
+							<input type="text" class="num" name="f3" maxlength="1" required>
+							<div class="space"></div>
+							<input type="text" class="num" name="f4" maxlength="1" required>
+							<input type="text" class="num" name="f5" maxlength="1" required>
+
+						</div>
+						<input class="form-control text-capitalize" type="submit" value="Register Account">
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+</header>
+<!-- //header -->
+
+
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i style="color:white;" class="fab fa-asymmetrik"></i>USE CASES</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img src="{% static 'login/images/robot_wall2.jpg' %}" class="img-fluid mb-3" alt="Modal Image" />
+				<ul>
+  <li>With the help of pattern keys, which can only be recognised by users who have registered accounts, this project manages security attacks made through social engineering.</li>
+  <li>The Fail Success [f &amp; s] input key is handled by the pattern key when registering an account. Every time you connect into your account, this key is used.</li>
+  <li>The distinction between authorised users and anonymous users is that authorised users must log in on their first attempt and then check their pattern key to see whether their account matches. If it does, your website will then reroute to the admin page. Whereas in this instance, since Anonymous person logged in on their first attempt without understanding the concept of a pattern key, it is necessary for them to wait for admin permission or rejection.</li>
+  <li>By employing this pattern key technique, even if attackers gain access to our account and have our user ID and secret key, they will be unable to log in without first knowing the pattern key layer. This layer protects the attacker by confusing what occurs in the backend and preventing them from accessing the data until admin approval.</li>
+  <li>One might wonder what would happen if the compromised data contained information about a pattern key. To prevent this personal information leakage, the pattern key details will be configured into numerous different servers, making it impossible for an attacker to determine which IP address the pattern key has been saved on.</li>
+  <li>The existing services like Oauth, OpenID, SAML, JWT, Kerberos, etc. are overcome by providing this pattern key layer.</li>
+</ul>
+			</div>
+			<div class="modal-footer">
+
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- video Modal Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Vo1urF6S4u0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save Changes</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- //video Model Popup -->
+
+<!--/Login-->
+<div class="modal fade" id="exampleModalCenter2" xml:id="login_" tabindex="-1" role="dialog" aria-hidden="true" >
+	<div class="modal-dialog modal-dialog-centered" role="document" >
+		<div class="modal-content" style="background-color:grey;">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" id="login_">
+				<div class="login px-4 mx-auto mw-100">
+					<h5 class="text-center mb-4">Login Now</h5>
+					<form action="/user_login/" method="post">
+						{% csrf_token %}
+
+						<div class="form-group">
+							<label class="mb-2" style="color:black;">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="" required="">
+						</div>
+						<div class="form-group">
+							<label class="mb-2" style="color:black;">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="" required="">
+<!--							{{ form.as_p }}-->
+<!--							<input type="submit" value="Save Data">-->
+
+						</div>
+<!--						<div class="form-check mb-2">-->
+<!--							<input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--							<label class="form-check-label" for="exampleCheck1" style="color:black;">Check me out</label>-->
+<!--						</div>-->
+<!--						<input type="submit" class="save_button" value="Save Data">-->
+
+
+
+
+						<button type="submit" class="btn btn-primary submit mt-2" style="color:black;">Sign In</button>
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//Login-->
+
+    <!-- js -->
+<script>
+	const nums = document.querySelectorAll('.num')
+        const form = document.querySelector('form')
+
+        nums.forEach((num, index) => {
+            num.dataset.id = index
+
+            num.addEventListener('keyup', () => {
+                if (num.value.length == 1) {
+                    if (nums[nums.length - 1].value.length == 1)
+                    nums[parseInt(num.dataset.id) + 1].focus()
+                }
+            })
+        })
+</script>
+
+
+    <script src="{% static 'login/js/jquery-2.2.3.min.js' %}"></script>
+    <script src="{% static 'login/js/bootstrap.js' %}"></script>
+    <!-- //js -->
+
+	<!-- animation js -->
+	<script src="{% static 'login/js/aos.js' %}"></script>
+	<script>
+		AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+    </script>
+	<!-- //animation js -->
+
+	<!-- testimonials  Responsiveslides -->
+    <script src="{% static 'login/js/responsiveslides.min.js' %}"></script>
+    <script>
+        // You can also use"$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- //testimonials  Responsiveslides -->
+
+	<!-- sticky nav bar-->
+	<script>
+		$(() => {
+
+		  //On Scroll Functionality
+		  $(window).scroll(() => {
+			var windowTop = $(window).scrollTop();
+			windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+			windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+		  });
+
+		  //Click Logo To Scroll To Top
+		  $('#logo').on('click', () => {
+			$('html,body').animate({
+			  scrollTop: 0
+			}, 500);
+		  });
+
+		 /*
+		  //Smooth Scrolling Using Navigation Menu
+		  $('a[href*="#"]').on('click', function (e) {
+			$('html,body').animate({
+			  scrollTop: $($(this).attr('href')).offset().top - 100
+			}, 500);
+			e.preventDefault();
+		  });
+		 */
+
+		  //Toggle Menu
+		  $('#menu-toggle').on('click', () => {
+			$('#menu-toggle').toggleClass('closeMenu');
+			$('ul').toggleClass('showMenu');
+
+			$('li').on('click', () => {
+			  $('ul').removeClass('showMenu');
+			  $('#menu-toggle').removeClass('closeMenu');
+			});
+		  });
+
+		});
+	</script>
+	<!-- //sticky nav bar -->
+
+	<script src="{% static 'login/js/smoothscroll.js' %}"></script><!-- Smooth scrolling -->
+
+    <!-- start-smoth-scrolling -->
+    <script src="{% static 'login/js/move-top.js' %}"></script>
+    <script src="{% static 'login/js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            /*
+			var defaults = {
+				  containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			 };
+			*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //end-smoth-scrolling -->
+
+</body>
+</html>

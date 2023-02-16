@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'hacker_login/css/style.css' %}">
+    <title>Hacker Login</title>
+</head>
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+
+</script>
+<section>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="signin">
+        <form action="/ha_login/" class="mt-4" method="post">
+            {% csrf_token %}
+        <div class="content">
+            <h2>Sign In</h2>
+            <div class="form">
+                <div class="inputBx" style="width:300px;">
+                    <input type="text" name="email" value="{{x.username}}" required>
+                    <i>UserName</i>
+                </div>
+                <div class="inputBx">
+                    <input type="password" name="password" value="{{x.password}}" required>
+                    <i>Password</i>
+                </div>
+                <div class="inputBx">
+                    <input type="submit" value="Login">
+
+                </div>
+            </div>
+        </div>
+            </form>
+    </div>
+</section>
+</body>
+</html>

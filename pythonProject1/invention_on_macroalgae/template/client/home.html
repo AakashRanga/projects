@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<title>User Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Negotiation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="{% static 'f_client/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'f_client/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="{% static 'store_files/css/main.css' %}">
+<!-- js -->
+<script type="text/javascript" src="{% static 'f_client/js/jquery-2.1.4.min.js' %}"></script>
+<script src="{% static 'f_client/js/main.js' %}"></script>
+<!-- //js -->
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="{% static 'f_client/css/font-awesome.min.css' %}" />
+<!-- //font-awesome icons -->
+<link rel="stylesheet" href="{% static 'f_client/css/flexslider.css' %}" type="text/css" media="screen" property="" />
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+ </head>
+<body style="height:10px;">
+<script>
+
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+
+</script>
+
+	<div class="header">
+		<div class="container" >
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+<!--					<h1><a class="navbar-brand" href="/client_home/">client</a></h1>-->
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav class="cl-effect-13" id="cl-effect-13">
+						<ul class="nav navbar-nav">
+							<li><a href="/client_home/">Home</a></li>
+
+							<li><a href="/newproduct/">Products</a></li>
+
+							<li><a href="/product_looking_for/">Product Looking For</a></li>
+
+							<li><a href="/specific_product/">Product Specification</a></li>
+
+							<li class="dropdown">
+								<a  class="dropdown-toggle" data-toggle="dropdown">Purchase<b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="/store/">Buy Products</a></li>
+									<li><a href="/purchased/">Purchased Product</a></li>
+									<li><a href="/payment/">Make Payment</a></li>
+								</ul>
+							</li>
+
+<!--							<li><a href="/client_contact/">Contact</a></li>-->
+
+<!--							<li><a href="/client_home/">Move Back</a></li>-->
+
+							<li><a href="/cient_logout/">Logout</a></li>
+
+						</ul>
+
+
+					</nav>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="banner">
+		{% block content %}
+		<div class="container">
+
+			<section class="slider" >
+					<div class="flexslider" style="height:720px;">
+
+					</div>
+			</section>
+			<!-- flexSlider -->
+				<script defer src="{% static 'f_client/js/jquery.flexslider.js' %}"></script>
+				<script type="{% static 'f_client/text/javascript' %}">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				</script>
+			<!-- //flexSlider -->
+		</div>
+	</div>
+<!-- //banner -->
+<!-- services -->
+
+<!-- //services -->
+<!-- stats -->
+
+<!-- //stats -->
+<!-- stats -->
+	<script src="{% static 'f_client/js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'f_client/js/jquery.countup.js' %}"></script>
+		<script>
+			$('.counter').countUp();
+		</script>
+<!-- //stats -->
+<!-- about-team -->
+
+<!-- //about-team -->
+<!-- testimonials -->
+
+
+	<!-- //footer -->
+	<!-- copyright -->
+
+<!-- //Modal1 -->
+
+<!-- for bootstrap working -->
+<script src="{% static 'f_client/js/bootstrap.js' %}"></script>
+<!-- //for bootstrap working -->
+
+
+</body>
+{% endblock %}
+</html>

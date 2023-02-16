@@ -1,0 +1,45 @@
+<html>
+{% extends 'security/home.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'security/fontawesome/css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'security/account_re/style.css' %}">
+</head>
+  <script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+  </script>
+<body>
+ <div class="container" style="margin-top:5px;">
+ 	<div class="header">
+ 		<h1 style="color:white;">Retrieve Account</h1>
+ 	</div>
+ 	<div class="main">
+ 		<form action="/sec_acc/" method="post">
+			{% csrf_token %}
+ 			<span>
+ 				<i class="fa fa-user"></i>
+ 				<input type="text" placeholder="Email" name="email" value="{{x.email}}">
+ 			</span><br>
+ 			<span>
+ 				<i class="fa fa-lock"></i>
+ 				<input type="password" placeholder="Password" name="password">
+ 			</span><br>
+			<span>
+ 				<i class="fa fa-lock"></i>
+ 				<input type="password" placeholder="Confirm Password" >
+ 			</span><br>
+ 				<button>REVISE</button>
+
+ 		</form>
+ 	</div>
+ </div>
+</body>
+{% endblock %}
+</html>
+
+
